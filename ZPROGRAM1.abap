@@ -13,7 +13,7 @@ TYPES customer_name1 TYPE c LENGTH 1.
 TYPES customer_name2 TYPE c LENGTH 10. " <-- Solution
 
 DATA d_variable1 TYPE customer_name1 VALUE 'AB'.
-WRITE / d_variable1. " It only prints A because variables of type customer_name1 only stores 1 character
+WRITE / d_variable1. " It only prints A because variables of type customer_name1 only store 1 character
 
 DATA d_variable2 TYPE customer_name2 VALUE 'AB'.
 WRITE / d_variable2. " It prints AB
