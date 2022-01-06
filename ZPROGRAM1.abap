@@ -37,7 +37,7 @@ TYPES creation_date TYPE d.
 TYPES last_changed_at TYPE t.
 
 * Exercise 6. Declare a structure type with 5 fields, each field with the same types from exercises 1 to 5
-TYPES: BEGIN OF wa_customer_structure,
+TYPES: BEGIN OF wa_customer_structure, " We are using the keyword TYPES instead of DATA
          name TYPE customer_name1,
          n_employees LIKE d_number_of_employees,
          unpaid_invoices TYPE number_of_unpaid_invoices,
