@@ -38,12 +38,12 @@ TYPES last_changed_at TYPE t.
 
 * Exercise 6. Declare a structure type with 5 fields, each field with the same types from exercises 1 to 5
 TYPES: BEGIN OF wa_customer_structure,
-  name TYPE customer_name1,
-  n_employees LIKE d_number_of_employees,
-  unpaid_invoices TYPE number_of_unpaid_invoices,
-  creation_date TYPE creation_date,
-  last_changed_at TYPE last_changed_at,
-END OF wa_customer_structure.
+         name TYPE customer_name1,
+         n_employees LIKE d_number_of_employees,
+         unpaid_invoices TYPE number_of_unpaid_invoices,
+         creation_date TYPE creation_date,
+         last_changed_at TYPE last_changed_at,
+       END OF wa_customer_structure.
 
 " Semicolon (:) is recommended in this case
 " See that wa_customer_structure isn't a structure but a type
