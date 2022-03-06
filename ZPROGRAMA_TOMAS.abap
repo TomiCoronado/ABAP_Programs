@@ -1,7 +1,7 @@
 *&--------------------------------------------------------------------------------------------------------*
 *& Report ZPROGRAMA_TOMAS
 *&--------------------------------------------------------------------------------------------------------*
-*& For further detail see document Explanation_Transaction_for_entering_a_new_entry_into_a_Database_table |
+*& For further detail see document ZPROGRAMA_TOMAS_Explanation
 *&--------------------------------------------------------------------------------------------------------*
 REPORT ZPROGRAMA_TOMAS.
 *Duda 1:¿No hace falta daclarar con TABLES la tabla del diccionario ZTABLA_TOMAS, ni la clase que se usa abajo?
