@@ -45,7 +45,7 @@ START-OF-SELECTION.
           ls_alumno-alumno = p_alumno.
           INSERT ZTABLA_TOMAS FROM ls_alumno.
           IF sy-subrc = 0.
-            COMMIT WORK AND WAIT.              "Updates last acction in the Database table and waits for it to finish updating. Then, the program execution continues
+            COMMIT WORK AND WAIT.              "Updates last acction into the Database table and waits for it to finish updating. Then, the program execution continues
             MESSAGE 'The student has been added to the table' TYPE 'S'.
           ELSE.
             ROLLBACK WORK.                     "Doesn´t update the previous INSERT in the Database table. Then it cleans the call stack where ABAP had stored that INSERT
