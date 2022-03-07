@@ -34,7 +34,7 @@ START-OF-SELECTION.
 
   CASE 'X'.
     WHEN p_add.
-      IF p_alumno IS NOT INITIAL.              "This if avoids entering a void entry to the table if user doesn´t fill p_alumno parameter and presses execute
+      IF p_alumno IS NOT INITIAL.              "This if avoids creating a void entry in the Database table if user doesn´t fill p_alumno parameter and presses execute
         SELECT SINGLE * FROM ZTABLA_TOMAS
           INTO ls_alumno
           WHERE alumno = p_alumno.
