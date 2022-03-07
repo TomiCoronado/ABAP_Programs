@@ -34,7 +34,7 @@ START-OF-SELECTION.
 
   CASE 'X'.
     WHEN p_add.
-      IF p_alumno IS NOT INITIAL.              "Duda 2: no sé para qué es este if si no tiene un else
+      IF p_alumno IS NOT INITIAL.              "This if avoids entering a void entry to the table if user doesn´t fill p_alumno parameter and presses execute
         SELECT SINGLE * FROM ZTABLA_TOMAS
           INTO ls_alumno
           WHERE alumno = p_alumno.
@@ -45,10 +45,10 @@ START-OF-SELECTION.
           ls_alumno-alumno = p_alumno.
           INSERT ZTABLA_TOMAS FROM ls_alumno.
           IF sy-subrc = 0.
-            COMMIT WORK AND WAIT.              "Duda 3: no sé qué hace esta sentencia
-            MESSAGE 'The stident has been added to the table' TYPE 'S'.
+            COMMIT WORK AND WAIT.              "Updates last acction in the Database table and waits for it to finish updating. Then, the program execution continues
+            MESSAGE 'The student has been added to the table' TYPE 'S'.
           ELSE.
-            ROLLBACK WORK.                     "Duda 4: no sé qué hace esta sentencia
+            ROLLBACK WORK.                     "Doesn´t update the previous INSERT in the Database table. Then it cleans the call stack where ABAP had stored that INSERT
           ENDIF.
         ENDIF.
       ENDIF.
