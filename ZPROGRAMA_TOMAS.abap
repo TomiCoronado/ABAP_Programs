@@ -6,7 +6,6 @@
 *& See document ZPROGRAMA_TOMAS_Explanation.pdf for further detail about the creation of the t-code and the program 
 *&-----------------------------------------------------------------------------------------------------------------------------------*
 REPORT ZPROGRAMA_TOMAS.
-*Duda 1:¿No hace falta daclarar con TABLES la tabla del diccionario ZTABLA_TOMAS, ni la clase que se usa abajo?
 
 *Declarations
 DATA: gt_alumno TYPE TABLE OF ZTABLA_TOMAS, "internal table
