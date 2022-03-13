@@ -64,7 +64,6 @@ AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_fich.
     IF sy-subrc <> 0.
       MESSAGE 'Error at chosing file in application server' TYPE 'E'.
     ENDIF.
-
   ENDIF.
 
 
