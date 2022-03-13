@@ -4,7 +4,7 @@
 *& This program is a modificacion of ZPROGRAMATOMAS2. This code also
 *& loads a file from local server or aplication server, but, instead of
 *& creting a new entry in a Database table with this data, it performs
-*& a Batch input operation. The program calls xk01 transaction to modify
+*& a Batch input operation. The program calls xk02 transaction to modify
 *& an existing vendor with the data provided by the .txt file
 *&---------------------------------------------------------------------*
 REPORT zcarga_batchinput2.
