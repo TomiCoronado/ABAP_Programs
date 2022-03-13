@@ -3,7 +3,7 @@
 *&-----------------------------------------------------------------------------------------------------------------------------------*
 *& This program can be executed with t-code ZTRANSACCION_TOMAS. It is used to enter a new entry in the ZTABLA_TOMAS Database table
 *&-----------------------------------------------------------------------------------------------------------------------------------*
-*& See document ZPROGRAMA_TOMAS_Explanation.pdf for further detail about the creation of the t-code and the program 
+*& See document ZPROGRAMA_TOMAS1_Explanation.pdf for further detail about the creation of the t-code and the program 
 *&-----------------------------------------------------------------------------------------------------------------------------------*
 REPORT ZPROGRAMA_TOMAS.
 
