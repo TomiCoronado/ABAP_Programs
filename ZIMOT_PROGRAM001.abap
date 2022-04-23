@@ -6,6 +6,9 @@
 
 INCLUDE zimot_program001_top                    .    " Global Data
 INCLUDE zimot_program001_sel                    .    " Selection Screen
+*"Otra manera:
+*INCLUDE: zimot_program001_top,   
+*         zimot_program001_sel.
 
 
 * INCLUDE ZIMOT_PROGRAM001_O01                    .  " PBO-Modules
