@@ -61,12 +61,12 @@ START-OF-SELECTION.
 
       SELECT FROM zprod_jhp
         FIELDS * WHERE matnr IN @so_matnr
-      INTO TABLE @DATA(gt_products).        " ABAP SQL
+        INTO TABLE @DATA(gt_products).        " ABAP SQL
 
       LOOP AT gt_products INTO gs_products.
         WRITE / gs_products-descr.
       ENDLOOP.
-      "Usamos el selecto options para mostrar por pantalla la descripcion
+      "Usamos el select options para mostrar por pantalla la descripcion
       "de los materiales que están dentro del rango que hayamos indicado
 
   ENDCASE.
