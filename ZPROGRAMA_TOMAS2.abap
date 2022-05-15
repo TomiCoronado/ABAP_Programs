@@ -6,7 +6,7 @@
 *& MANDT  ID_EMPRESA  ID_EMPLEADO NOMBRE  APELLIDOS
 *&
 *& In this report we will upload a .txt file that contains the following
-*& value for each of the previous fields:
+*& values for each of the previous fields:
 *&
 *& 100  A2  1990  Tomas Coronado
 *&
@@ -40,9 +40,9 @@ PARAMETERS: p_local RADIOBUTTON GROUP g1 DEFAULT 'X'.
 PARAMETERS: p_serv  RADIOBUTTON GROUP g1.
 
 AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_fich.
-  IF p_local = 'X'.                            "This means we want to upload the .txt file from local server
-    "Now we call a function for the matchcode
-    CALL FUNCTION 'KD_GET_FILENAME_ON_F4'
+  IF p_local = 'X'.     "This means we want to upload the .txt file from local server
+    "Next procedure enables the user to choose a local file when pressing p_fich matchbutton
+    CALL FUNCTION 'KD_GET_FILENAME_ON_F4'      
       CHANGING
         file_name     = p_fich
       EXCEPTIONS
@@ -51,8 +51,8 @@ AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_fich.
     IF sy-subrc <> 0.
       MESSAGE 'Error at chosing file in local server' TYPE 'E'.
     ENDIF.
-  ELSE.                                        "This means we want to upload the .txt file from application server
-    "Now we call a function for the matchcode
+  ELSE.                 "This means we want to upload the .txt file from application server
+    "Next procedure enables the user to choose a file from application server when pressing p_fich matchbutton
     CALL FUNCTION '/SAPDMC/LSM_F4_SERVER_FILE' "Another alternative is to use: CALL FUNCTION 'F4_FILENAME'
       EXPORTING
         directory        = 'E:/usr/sap/trans'  "The file has to be located on this directory.
