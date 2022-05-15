@@ -53,7 +53,7 @@ AT SELECTION-SCREEN ON VALUE-REQUEST FOR p_fich.
     ENDIF.
   ELSE.                 "This means we want to upload the .txt file from application server
     "Next procedure enables the user to choose a file from application server when pressing p_fich matchbutton
-    CALL FUNCTION '/SAPDMC/LSM_F4_SERVER_FILE' "Another alternative is to use: CALL FUNCTION 'F4_FILENAME'
+    CALL FUNCTION '/SAPDMC/LSM_F4_SERVER_FILE' "Another alternative is to use: CALL FUNCTION 'F4_FILENAME' or CALL FUNCTION 'F4_DXFILENAME_TOPRECURSION'
       EXPORTING
         directory        = 'E:/usr/sap/trans'  "The file has to be located on this directory.
       IMPORTING
